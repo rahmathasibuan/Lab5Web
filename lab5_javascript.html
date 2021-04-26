@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contoh program JavaScript</title>
+	<script language="JavaScript">
+ 	function()
+     {
+ 	alert ("memanggil javascript lewat body onload")
+     }
+ </script>
+<script type="text/javascript" language="JavaScript">
+ 	function test (val1,val2)
+ 	{
+ 		document.write("<br>"+"perkalian : val1*val2 "+"<br>")
+ 		document.write(val1*val2)
+ 		document.write("<br>"+"pembagian : val1/val2 "+"<br>")
+ 		document.write(val1/val2)
+ 		document.write("<br>"+"penjumlahan : val1+val2 "+"<br>")
+ 		document.write(val1+val2)
+ 		document.write("<br>"+"pnegurangan : val1-val2 "+"<br>")
+ 		document.write(val1-val2)
+ 		document.write("<br>"+"modulus : val1%val2 "+"<br>")
+ 		document.write(val1%val2)
+ 	}
+ </script>
+ <script language="JavaScript">
+    function test ()
+    {
+        val1=window.prompt("input nilai (1-5):")
+        switch (val1)
+        {
+            case "1" :
+                document.write("bilangan satu")
+                break
+            case "2" :
+                document.write("bilangan dua")
+                break
+            case "3" :
+                document.write("bilangan tiga")
+                break
+            case "4" :
+                document.write("bilangan empat")
+                break
+            case "5" :
+                document.write("bilangan lima")
+                break
+            default :
+                document.write("bilangan lainnya")
+        }
+    } </script>
+
+ <title> Mengenal JavaScript </title>
+</head>
+<body>
+ <h1> Pengenalan JavaScript </h1>
+ <h3> Contoh document.write dan console.log </h3>
+ <script type="text/javascript" language="JavaScript">
+<!--
+	window.alert("ini merupakan pesan untuk anda");
+	//-->
+</script>
+      percobaan memakai javascript:<br>
+<script type="text/javascript" language="JavaScript">
+ 	<!--
+ 		document.write("Selamat mencoba JavaScript<br>");
+ 		document.write("Semoga Sukses");
+ 	//-->
+</script>
+<script language="JavaScript">
+  <!--
+        var nilai = prompt("nilai (0-100): ", 0);
+        var hasil = "";
+        if (nilai >= 60)
+        hasil = "lulus";
+    else
+        hasil = "tidak lulus";
+    document.write("hasil: " + hasil);
+    //-->
+
+</script>
+<input type="button" name="button1" value="arithmetic" onclick=test(9,4)>
+<input type="button" name="button1" value="switch" onclick=test()>
+
+ document.write("Hello World");
+ console.log("Hello World");
+ </script>
+</body>
+</html>

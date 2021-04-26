@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Belajar JavaScript</title>
+        <link rel="stylesheet" href="style.css">
+        <!-- Validasi JavaScript -->
+        <script language="JavaScript">
+            <!-- fungsi alphabet -->
+            function Alphabet(nilai, pesan) {
+                var alphaExp = /^[a-zA-Z]+$/;
+                if(nilai.value.match(alphaExp)) {
+                    return true;
+                }
+                else {
+                    alert(pesan);
+                    nilai.focus();
+                    return false;
+                }
+            }
+            <!-- fungsi number -->
+            function Number(nilai, pesan) {
+                var numberExp = /^[0-9]+$/;
+                if(nilai.value.match(numberExp)) {
+                    return true;
+                }
+                else {
+                    alert(pesan);
+                    nilai.focus();
+                    return false;
+                }
+            }
+            <!-- fungsi Email  -->
+            function cekEmail(nilai, pesan) {
+                var email = /^([a-zA-Z0-9_.+-])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9]{2,4})+$/;
+                if(nilai.value.match(email)) {
+                    return true;
+                }
+                else {
+                    alert(pesan);
+                    nilai.focus();
+                    return false;
+                }
+            }x
+
+            function validasi() {
+                Alphabet(document.getElementById('nama'), 'Nama harus Huruf semua!!');
+                Number(document.getElementById('telp'), 'Telp. hanya berisi Number!!');
+                cekEmail(document.getElementById('email'), 'Email tidak benar!!');
+            }
+        </script>
+    </head>
+    <body>
+        <h2 class="judul">Form HTML dengan Validasi JavaScript</h2>
+        <div class="card">
+        <form id="main">
+            <p> Nama    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="nama" id="nama"></p>
+            <p>No. Telp &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp; <input type="number" name="telp" id="telp"></p>
+            <p>Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" name="email" id="email"></p>
+            <p> <input type="submit" onClick="validasi()" value="Submit"></p>
+        </form>
+        </div>
+    </body>
+</html>
